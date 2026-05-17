@@ -51,30 +51,6 @@ Check these paths in order; first hit wins:
 
 Found → read, parse, apply. Not found → run first-time setup (`references/config/first-time-setup.md`) before anything else.
 
-### Project Article Style
-
-If EXTEND.md contains `default_style_reference`, resolve it relative to the EXTEND.md file and read that style file before generating or publishing article content. If the key is absent, also check for `ARTICLE_STYLE.md` beside the selected EXTEND.md. Treat this file as the user's house style and apply it before the generic theme defaults.
-
-For the current project, this style is expected to cover the user's recurring requirements:
-
-- author should be the public account name, not the user's real name;
-- first paragraph stays normal body text;
-- article wording should stay natural, specific, and engineer-like; avoid generic AI-style phrasing and only lightly polish already-good technical content;
-- article language should follow evidence-first technical writing: present observable facts, then derived structure, then judgment; avoid host-like transitions, empty evaluation words, exaggerated marketing tone, and unnecessary “不是……而是……” contrast; distinguish facts, inference, and forward-looking judgment;
-- for industry trend articles, ground claims in concrete modules, interfaces, constraints, sources, and before/after comparisons instead of broad labels such as ecosystem, empowerment, disruption, or deep integration;
-- formulas must be pre-rendered for WeChat, not left as raw LaTeX/source tokens;
-- do not include pseudocode unless the user explicitly asks for pseudocode/code implementation; explain implementation with diagrams, ordered steps, tables, and prose by default;
-- if pseudocode is explicitly requested, render it as a commented code block with dark-mode friendly neutral translucent styling rather than a fixed white background;
-- technical figures should be PPT/Visio/paper-style SVG or clean diagrams, not AI-looking illustrations;
-- figure labels belong in captions, not inside the artwork;
-- tables should be real HTML/Markdown tables, with mobile horizontal scroll when wide;
-- ordered and unordered lists need visible indentation; ordered list markers should use Times New Roman, body text color, tighter line-height, and the same font size as the following list text;
-- reference/search/source links should be clickable anchors, not plain URLs; reference sections should not use a left blue border or quote-block styling, and headings/link text should use the house title blue;
-- cover images should prefer the most information-dense figure already in the article; only generate a new cover when the article has no suitable figure;
-- when generating a WeChat article for this user, publish it to the WeChat Official Account draft box by default unless the user explicitly asks not to publish;
-- final WeChat article output should use the user's custom HTML template/style file, not the generic markdown/default theme output from the publishing scripts;
-- perform a pre-publish visual/style checklist when custom HTML is generated.
-
 **Minimum keys** (case-insensitive, accept `1/0` or `true/false`):
 
 | Key | Default | Mapping |
@@ -151,8 +127,6 @@ Details: `references/image-text-posting.md`.
 ### Step 0: Load Preferences
 
 Check and load EXTEND.md (see "Preferences" above). If not found, complete first-time setup before any other questions. Resolve and cache for later steps: `default_theme`, `default_color`, `default_author`, `need_open_comment`, `only_fans_can_comment`.
-
-Then load the project article style file if configured by `default_style_reference` or present as `ARTICLE_STYLE.md` beside EXTEND.md. When generating a new article, cover, formula HTML, tables, or figures, follow this style file even if it differs from the generic theme defaults. For custom HTML, use the style file as a checklist before publishing.
 
 ### Step 1: Determine Input Type
 
