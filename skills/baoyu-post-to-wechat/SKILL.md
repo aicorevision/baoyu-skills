@@ -71,9 +71,6 @@ For the current project, this style is expected to cover the user's recurring re
 - ordered and unordered lists need visible indentation; ordered list markers should use Times New Roman, body text color, tighter line-height, and the same font size as the following list text;
 - reference/search/source links should be clickable anchors, not plain URLs; reference sections should not use a left blue border or quote-block styling, and headings/link text should use the house title blue;
 - cover images should prefer the most information-dense figure already in the article; only generate a new cover when the article has no suitable figure;
-- when the user asks to improve click-through, 10w+ style, titles, covers, or article attractiveness, generate multiple title candidates but publish only the final chosen title; adapt popular-article tactics to professional technical content instead of copying entertainment/clickbait patterns;
-- cover design should communicate both click value and professional density: compressed title, one information-rich technical diagram, and 3 concise learning benefits; avoid AI-looking 3D/gradient/stock imagery;
-- technical illustrations should be selected where they reduce cognitive load: architecture, control loop, state machine, signal flow, force/energy distribution, limits, and fallback logic;
 - when generating a WeChat article for this user, publish it to the WeChat Official Account draft box by default unless the user explicitly asks not to publish;
 - final WeChat article output should use the user's custom HTML template/style file, not the generic markdown/default theme output from the publishing scripts;
 - perform a pre-publish visual/style checklist when custom HTML is generated.
